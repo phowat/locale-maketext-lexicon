@@ -1,2 +1,6 @@
 /blib
 /.project
+Makefile
+Makefile.old
+MANIFEST.bak
+pm_to_blib

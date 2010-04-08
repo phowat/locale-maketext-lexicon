@@ -1,0 +1,32 @@
+---
+abstract: 'Use other catalog formats in Maketext'
+author:
+  - 'Audrey Tang <cpan@audreyt.org>'
+build_requires:
+  ExtUtils::MakeMaker: 6.42
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
+distribution_type: module
+generated_by: 'Module::Install version 0.95'
+license: MIT
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Locale-Maketext-Lexicon
+no_index:
+  directory:
+    - inc
+    - t
+recommends:
+  HTML::Parser: 3.56
+  Lingua::EN::Sentence: 0.25
+  PPI: 1.203
+  Template: 2.20
+  Template::Constants: 2.75
+  YAML: 0.66
+  YAML::Loader: 0.66
+requires:
+  Locale::Maketext: 0.01
+  perl: 5.005
+version: 0.80
