@@ -1,5 +1,5 @@
 package Locale::Maketext::Extract;
-$Locale::Maketext::Extract::VERSION = '0.37';
+$Locale::Maketext::Extract::VERSION = '0.38';
 
 use strict;
 use Locale::Maketext::Lexicon();
