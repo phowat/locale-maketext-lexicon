@@ -70,9 +70,11 @@ sub run {
                wanted => sub {
                    if (-d) {
                        $File::Find::prune
-                           = /^(\.svn|blib|autogen|var|m4|local|CVS)$/;
+                           = /^(\.svn|blib|autogen|var|m4|local|CVS|\.git)$/;
                        return;
                    }
+                   # Only extract from non-binary, normal files
+                   return unless (-f or -s) and -T;
                    return
                        if (/\.po$|\.bak$|~|,D|,B$/i)
                        || (/^[\.#]/);
