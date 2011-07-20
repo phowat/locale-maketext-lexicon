@@ -1,6 +1,12 @@
 [Changes for 0.87 - 2011-07-20]
+
+* Locale::Maketext::Extract::Plugin::Mason
+   - Added support for Mason 2
+     Thanks to ASIMON for the patch.
+
 * Locale::Maketext::Extract
    - Now warns on loading bad plugins if warnings enabled
+
 * Locale::Maketext::Extract::Plugin::Base
    - Corrected the synopsis
 

@@ -84,10 +84,14 @@ For a slightly more accurate, but much slower Perl parser, you can  use the PPI
 plugin. This does not have a short name (like C<perl>), but must be specified
 in full.
 
-=item HTML::Mason  (plugin: mason)
+=item HTML::Mason (Mason 1) and Mason (Mason 2) (plugin: mason)
 
-Strings inside C<E<lt>&|/lE<gt>I<...>E<lt>/&E<gt>> and
-C<E<lt>&|/locE<gt>I<...>E<lt>/&E<gt>> are extracted.
+HTML::Mason (aka Mason 1)
+ Strings inside <&|/l>...</&> and <&|/loc>...</&> are extracted.
+
+Mason (aka Mason 2)
+Strings inside <% $.floc { %>...</%> or <% $.fl { %>...</%> or
+<% $self->floc { %>...</%> or <% $self->fl { %>...</%> are extracted.
 
 =item Template Toolkit (plugin: tt2)
 
