@@ -38,6 +38,12 @@ Valid formats are:
 
 =item [% l('string',args) %]
 
+=item [% c.l('string') %]
+
+Also all the above combinations with C<c.> prepended should work
+correctly. This is the default syntax when using TT templates
+with L<Mojolicious>.
+
 =back
 
 l and loc are interchangeable.
