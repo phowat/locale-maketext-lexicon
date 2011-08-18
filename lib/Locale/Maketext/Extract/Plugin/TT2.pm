@@ -355,7 +355,8 @@ sub filter {
     $name = $name->[0];
     return ''
         unless $name eq "'l'"
-            or $name eq "'loc'";
+            or $name eq "'loc'"
+            or $name eq "'c.l'";
     if ( strip_quotes($block) ) {
         $block =~ s/\\\\/\\/g;
         $args = join_args( $class->args($args) );
