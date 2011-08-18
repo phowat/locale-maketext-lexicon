@@ -1,7 +1,7 @@
 #! /usr/bin/perl -w
 use lib '../lib';
 use strict;
-use Test::More tests => 76;
+use Test::More tests => 77;
 
 use_ok('Locale::Maketext::Extract');
 my $Ext = Locale::Maketext::Extract->new();
@@ -957,6 +957,11 @@ __TT__
 msgid "string"
 msgstr ""
 __EXAMPLE__
+
+    extract_ok(
+        q([% c.l('Hello, world!') %]) => "Hello, world!",
+        "Mojolicious syntax is supported correctly",
+    );
 
     #### END TT TESTS ############
 }
