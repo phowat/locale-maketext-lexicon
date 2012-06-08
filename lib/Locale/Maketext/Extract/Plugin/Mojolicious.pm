@@ -6,11 +6,11 @@ use Data::Dumper;
 
 =head1 NAME
 
-Locale::Maketext::Extract::Plugin::Generic - Generic template parser
+Locale::Maketext::Extract::Plugin::Mojolicious - Mojolicious helpers parser
 
 =head1 SYNOPSIS
 
-    $plugin = Locale::Maketext::Extract::Plugin::Generic->new(
+    $plugin = Locale::Maketext::Extract::Plugin::Mojolicious->new(
         $lexicon            # A Locale::Maketext::Extract object
         @file_types         # Optionally specify a list of recognised file types
     )
@@ -19,21 +19,22 @@ Locale::Maketext::Extract::Plugin::Generic - Generic template parser
 
 =head1 DESCRIPTION
 
-Extracts strings to localise from generic templates.
+Extracts strings to localise from mojolicious templates.
 
 =head1 SHORT PLUGIN NAME
 
-    generic
+    mojolicious
 
 =head1 VALID FORMATS
 
-Strings inside {{...}} are extracted.
+%=l 'hello'
+$self->l('hello');
 
-=head1 KNOWN FILE TYPES
+=head1 KNOWN LE TYPES
 
 =over 4
 
-=item All file types
+=item .html.ep .pl .pm
 
 =back
 
@@ -82,15 +83,15 @@ systems and perl source files.
 
 =item L<Locale::Maketext::Extract::Plugin::TextTemplate>
 
+=item L<Locale::Maketext::Extract::Plugin::Generic>
+
+=item L<Mojolicious::Plugin::I18N>
+
 =back
 
 =head1 AUTHORS
 
-Audrey Tang E<lt>cpan@audreyt.orgE<gt>
-
-=head1 COPYRIGHT
-
-Copyright 2002-2008 by Audrey Tang E<lt>cpan@audreyt.orgE<gt>.
+Pedro Howat E<lt>pedro.howat@gmail.comE<gt>
 
 This software is released under the MIT license cited below.
 
